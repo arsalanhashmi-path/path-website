@@ -16,40 +16,47 @@ export const FounderCard: React.FC<FounderCardProps> = ({
   thumbnailUrl,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full max-w-5xl mx-auto">
-      {/* Founder Info Card */}
-      <div className="flex-1 p-8 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm shadow-xl">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-2xl font-bold text-white shadow-lg">
+    <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 w-full max-w-5xl mx-auto">
+      {/* Founder Info Card - Minimal, clean design */}
+      <div className="flex-1 flex flex-col justify-center">
+        <div className="mb-8">
+          {/* Initials badge */}
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 md:bg-white text-white md:text-slate-900 text-xl font-bold mb-6 shadow-sm">
             {name.split(' ').map(n => n[0]).join('')}
           </div>
-          <div>
-            <h3 className="text-2xl font-bold text-white">{name}</h3>
-            <p className="text-indigo-400 font-medium">{title}</p>
-          </div>
+          
+          {/* Name & Title */}
+          <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 md:text-transparent md:bg-clip-text md:bg-gradient-to-r md:from-white md:to-slate-400 mb-2">
+            {name}
+          </h3>
+          <p className="text-lg text-slate-500 md:text-slate-500 font-medium uppercase tracking-wide">
+            {title}
+          </p>
         </div>
-        <p className="text-slate-300 leading-relaxed">{bio}</p>
+        
+        {/* Bio */}
+        <p className="text-slate-600 md:text-slate-400 leading-relaxed text-lg max-w-md">
+          {bio}
+        </p>
       </div>
 
-      {/* Portfolio Thumbnail */}
+      {/* Portfolio Thumbnail - Clean card */}
       <a
         href={portfolioUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex-1 relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:border-indigo-500/50 hover:shadow-indigo-500/20 hover:shadow-2xl"
+        className="group flex-1 relative rounded-xl overflow-hidden border border-slate-200 md:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.01] hover:border-slate-300 md:hover:border-slate-600"
       >
-        <div className="aspect-video bg-slate-900 relative overflow-hidden">
+        <div className="aspect-video bg-slate-100 md:bg-slate-900 relative overflow-hidden">
           <img
             src={thumbnailUrl}
             alt={`${name}'s Portfolio`}
             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-            <span className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium border border-white/20 flex items-center gap-2">
-              Visit Portfolio
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+            <span className="px-5 py-2.5 bg-white/95 rounded-full text-slate-900 text-sm font-medium flex items-center gap-2 shadow-lg">
+              View Portfolio
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </span>
           </div>

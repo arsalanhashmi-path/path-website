@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
           `}
         >
           <p className="text-lg md:text-xl text-slate-600 md:text-slate-400 mb-10 leading-relaxed font-light">
-            Path automatically reconstructs your company's working memory from Slack, Email, and Docs.
+            We're trying to build the future of computational intelligence.
           </p>
 
           <div className="flex gap-4">
