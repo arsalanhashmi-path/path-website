@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/founder/aliasad",
+      "destination": "https://agentic-terminal.vercel.app/"
+    },
+    {
+      "source": "/founder/aliasad/:path*",
+      "destination": "https://agentic-terminal.vercel.app/:path*"
+    }
+  ]
+}
