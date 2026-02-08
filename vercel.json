@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/((?!founders/aliasad).*)",
+      "destination": "/index.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/founders/aliasad",
