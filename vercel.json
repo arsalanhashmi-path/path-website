@@ -1,12 +1,12 @@
 {
   "redirects": [
     {
-      "source": "/founder/aliasad",
+      "source": "/founders/aliasad",
       "destination": "https://agentic-terminal.vercel.app/",
       "permanent": false
     },
     {
-      "source": "/founder/aliasad/:path*",
+      "source": "/founders/aliasad/:path*",
       "destination": "https://agentic-terminal.vercel.app/:path*",
       "permanent": false
     }
