@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { FoundersPage } from './components/FoundersPage';
 import { LoadingScreen } from './components/LoadingScreen';
 
 const App: React.FC = () => {
@@ -27,7 +29,10 @@ const App: React.FC = () => {
       >
         <Navbar />
         <main>
-          <Hero />
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/founders" element={<FoundersPage />} />
+          </Routes>
         </main>
         
         <footer className="py-12 px-6 border-t border-path-border text-center text-path-secondary text-sm">
