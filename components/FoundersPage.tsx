@@ -8,7 +8,7 @@ const founders = [
     name: 'Ali Asad',
     title: 'Founder',
     bio: 'Junior Full-Stack AI Engineer with 5+ years of experience building intelligent systems. Passionate about creating agentic applications that push the boundaries of human-computer interaction.',
-    portfolioUrl: '/founder/aliasad',
+    portfolioUrl: '/founders/aliasad',
     thumbnailUrl: '/aliasad-portfolio.png',
   },
 ];
