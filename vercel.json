@@ -9,6 +9,16 @@
       "source": "/founders/aliasad/:path*",
       "destination": "https://agentic-terminal.vercel.app/:path*",
       "permanent": false
+    },
+    {
+      "source": "/founders/arsalan",
+      "destination": "https://portfolio-ecru-pi-87.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/founders/arsalan/:path*",
+      "destination": "https://portfolio-ecru-pi-87.vercel.app/:path*",
+      "permanent": false
     }
   ]
 }

@@ -11,6 +11,13 @@ const founders = [
     portfolioUrl: '/founders/aliasad',
     thumbnailUrl: '/aliasad-portfolio.png',
   },
+  {
+    name: 'Arsalan Ashaar Hashmi',
+    title: 'Founder',
+    bio: 'Co-Founder of Path. Dedicated to building the next generation of organizational intelligence tools and platforms.',
+    portfolioUrl: '/founders/arsalan',
+    thumbnailUrl: '/arsalan-portfolio.png', // Placeholder - user needs to add this file
+  },
 ];
 
 export const FoundersPage: React.FC = () => {
